@@ -19,7 +19,7 @@ concurrency:
 jobs:
   send:
     runs-on: ubuntu-latest
-    timeout-minutes:50
+    timeout-minutes: 50
     permissions:
       contents: read
     env:
