@@ -1,16 +1,16 @@
-name: Send Douyin Messages
+name: 发送抖音消息
 
 on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: Only verify login and friends without sending
+        description: 只验证登录和好友定位，不真正发送消息
         type: boolean
         default: false
-  # 使用 GitHub Actions 的日程时把下面三行注释删掉；用外部 cron 不用管
-  # schedule:
-  #   - cron: "0 0 * * *"
-  #     timezone: "Asia/Shanghai"
+  schedule:
+    - cron: "23 19 * * *"
+      timezone: "Asia/Shanghai"
+
 
 concurrency:
   group: douyin-daily-sender
